@@ -11,6 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingWebStore.Domain.Tests", "TrainingWebStore.Domain.Tests\TrainingWebStore.Domain.Tests.csproj", "{9F5ECB3D-5068-4D5C-8B5F-96260D4F5E80}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E678EBA9-6193-4B3F-A59C-A6D08E6AE23F}"
+	ProjectSection(SolutionItems) = preProject
+		Path.txt = Path.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
