@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TrainingWebStore.Domain.Scopes;
+﻿using TrainingWebStore.Domain.Scopes;
 
 namespace TrainingWebStore.Domain.Entities
 {

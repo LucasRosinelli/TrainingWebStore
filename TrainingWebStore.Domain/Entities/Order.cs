@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TrainingWebStore.Domain.Enums;
 using TrainingWebStore.Domain.Scopes;
-using TrainingWebStore.SharedKernel.Validation;
 
 namespace TrainingWebStore.Domain.Entities
 {
