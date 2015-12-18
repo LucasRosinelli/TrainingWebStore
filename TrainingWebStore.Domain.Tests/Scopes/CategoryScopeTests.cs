@@ -9,7 +9,7 @@ namespace TrainingWebStore.Domain.Tests.Scopes
     public class CategoryScopeTests
     {
         [TestMethod]
-        [TestCategory("Category")]
+        [TestCategory("Category Scopes")]
         public void ShouldRegisterCategory()
         {
             var category = new Category("Placa Mãe");
@@ -17,7 +17,7 @@ namespace TrainingWebStore.Domain.Tests.Scopes
         }
 
         [TestMethod]
-        [TestCategory("Category")]
+        [TestCategory("Category Scopes")]
         public void ShouldUpdateCategoryTitle()
         {
             var category = new Category("Placa Mãe");

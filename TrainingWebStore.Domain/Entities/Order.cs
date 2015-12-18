@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using TrainingWebStore.Domain.Enums;
-using TrainingWebStore.SharedKernel.Events;
+using TrainingWebStore.Domain.Scopes;
 using TrainingWebStore.SharedKernel.Validation;
 
 namespace TrainingWebStore.Domain.Entities
@@ -22,7 +22,7 @@ namespace TrainingWebStore.Domain.Entities
 
         public int Id { get; private set; }
         public DateTime Date { get; private set; }
-        public IEnumerable<OrderItem> OrderItems
+        public ICollection<OrderItem> OrderItems
         {
             get { return this._orderItems; }
             private set { this._orderItems = new List<OrderItem>(value); }
@@ -63,7 +63,35 @@ namespace TrainingWebStore.Domain.Entities
 
             //this._orderItems.Add(orderItem);
             #endregion
-            AssertionConcern.AssertLength("123456", 2, 5, "Mínimo de 2 caracteres");
+            if (orderItem.Register())
+            {
+                this._orderItems.Add(orderItem);
+            }
+        }
+
+        public void Place()
+        {
+            if (!this.PlaceOrderScopeIsValid())
+            {
+                return;
+            }
+        }
+
+        public void MarkAsPaid()
+        {
+            // Dá baixa no estoque
+            this.Status = EOrderStatus.Paid;
+        }
+
+        public void MarkAsDelivered()
+        {
+            this.Status = EOrderStatus.Delivered;
+        }
+
+        public void Cancel()
+        {
+            // Estorna os produtos
+            this.Status = EOrderStatus.Canceled;
         }
     }
 }

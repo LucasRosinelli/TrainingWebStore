@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TrainingWebStore.Domain.Entities;
+﻿using TrainingWebStore.Domain.Entities;
 using TrainingWebStore.SharedKernel.Validation;
 
 namespace TrainingWebStore.Domain.Scopes

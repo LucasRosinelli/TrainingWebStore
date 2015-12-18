@@ -14,10 +14,7 @@ namespace TrainingWebStore.Domain.Entities
 
         public void Register()
         {
-            if (this.CreateCategoryScopeIsValid())
-            {
-
-            }
+            this.CreateCategoryScopeIsValid();
         }
 
         public void UpdateTitle(string title)

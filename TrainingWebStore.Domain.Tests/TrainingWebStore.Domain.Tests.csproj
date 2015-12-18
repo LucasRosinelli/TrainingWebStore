@@ -52,14 +52,18 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scopes\CategoryScopeTests.cs" />
+    <Compile Include="Scopes\UserScopeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TrainingWebStore.Domain\TrainingWebStore.Domain.csproj">
       <Project>{446dc6fc-4929-49cd-8b95-0b13d11eec91}</Project>
       <Name>TrainingWebStore.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TrainingWebStore.SharedKernel\TrainingWebStore.SharedKernel.csproj">
+      <Project>{e5b29b81-40e0-4c08-ad4a-73f60576d624}</Project>
+      <Name>TrainingWebStore.SharedKernel</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

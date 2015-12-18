@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TrainingWebStore.Domain.Scopes;
 
 namespace TrainingWebStore.Domain.Entities
 {
@@ -23,5 +24,26 @@ namespace TrainingWebStore.Domain.Entities
         public Product Product { get; private set; }
         public int OrderId { get; private set; }
         public Order Order { get; private set; }
+
+        public bool Register()
+        {
+            return this.RegisterOrderItemScopeIsValid();
+        }
+
+        public void AddProduct(Product product, int quantity, decimal price)
+        {
+            if (!this.AddProductScopeIsValid(product, quantity, price))
+            {
+                return;
+            }
+
+            this.ProductId = product.Id;
+            this.Product = product;
+            this.Quantity = quantity;
+            this.Price = price;
+
+            // Reserva o estoque
+            this.Product.UpdateQuantityOnHand(this.Product.QuantityOnHand - quantity);
+        }
     }
 }

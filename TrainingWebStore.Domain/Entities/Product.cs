@@ -1,4 +1,6 @@
-﻿namespace TrainingWebStore.Domain.Entities
+﻿using TrainingWebStore.Domain.Scopes;
+
+namespace TrainingWebStore.Domain.Entities
 {
     public class Product
     {
@@ -19,5 +21,42 @@
 
         public int CategoryId { get; private set; }
         public Category Category { get; private set; }
+
+        public void Register(int amount)
+        {
+            this.RegisterProductScopeIsValid();
+        }
+
+        public void UpdateQuantityOnHand(int amount)
+        {
+            if (!this.UpdateQuantityOnHandScopeIsValid(amount))
+            {
+                return;
+            }
+
+            this.QuantityOnHand = amount;
+        }
+
+        public void UpdatePrice(decimal price)
+        {
+            if (!this.UpdatePriceScopeIsValid(price))
+            {
+                return;
+            }
+
+            this.Price = price;
+        }
+
+        public void UpdateInfo(string title, string description, int categoryId)
+        {
+            if (!this.UpdateInfoScopeIsValid(title, description, categoryId))
+            {
+                return;
+            }
+
+            this.Title = title;
+            this.Description = description;
+            this.CategoryId = categoryId;
+        }
     }
 }
