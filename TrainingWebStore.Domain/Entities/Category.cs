@@ -1,4 +1,6 @@
-﻿namespace TrainingWebStore.Domain.Entities
+﻿using TrainingWebStore.Domain.Scopes;
+
+namespace TrainingWebStore.Domain.Entities
 {
     public class Category
     {
@@ -9,5 +11,23 @@
 
         public int Id { get; private set; }
         public string Title { get; private set; }
+
+        public void Register()
+        {
+            if (this.CreateCategoryScopeIsValid())
+            {
+
+            }
+        }
+
+        public void UpdateTitle(string title)
+        {
+            if (!this.UpdateCategoryScopeIsValid(title))
+            {
+                return;
+            }
+
+            this.Title = title;
+        }
     }
 }

@@ -1,11 +1,12 @@
-﻿namespace TrainingWebStore.Domain.Entities
+﻿using TrainingWebStore.SharedKernel.Helpers;
+namespace TrainingWebStore.Domain.Entities
 {
     public class User
     {
         public User(string email, string password, bool isAdmin)
         {
             this.Email = email;
-            this.Password = password;
+            this.Password = StringHelper.Encrypt(password);
             this.IsAdmin = isAdmin;
         }
 
