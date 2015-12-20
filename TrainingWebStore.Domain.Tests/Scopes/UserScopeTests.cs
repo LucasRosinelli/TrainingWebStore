@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TrainingWebStore.Domain.Entities;
 using TrainingWebStore.Domain.Scopes;
 using TrainingWebStore.SharedKernel.Helpers;
@@ -9,7 +8,7 @@ namespace TrainingWebStore.Domain.Tests.Scopes
     [TestClass]
     public class UserScopeTests
     {
-        private User validUser = new User("lucas.rosinelli@hotmail.com", "123456", true);
+        private User validUser = new User("lucas.rosinelli@hotmail.com", "123", true);
         private User invalidUserPassword = new User("lucas.rosinelli@hotmail.com", "", true);
         private User invalidUserEmail = new User("", "123456", true);
 
@@ -38,7 +37,7 @@ namespace TrainingWebStore.Domain.Tests.Scopes
         [TestCategory("User Scopes")]
         public void ShouldAuthenticateUser()
         {
-            var isValid = UserScopes.AuthenticateUserScopeIsValid(this.validUser, "lucas.rosinelli@hotmail.com", StringHelper.Encrypt("123456"));
+            var isValid = UserScopes.AuthenticateUserScopeIsValid(this.validUser, "lucas.rosinelli@hotmail.com", StringHelper.Encrypt("123"));
             Assert.AreEqual(true, isValid);
         }
 
@@ -46,7 +45,7 @@ namespace TrainingWebStore.Domain.Tests.Scopes
         [TestCategory("User Scopes")]
         public void ShouldNotAuthenticateUser()
         {
-            var isValid = UserScopes.AuthenticateUserScopeIsValid(this.validUser, "lucas.rosinelli@hotmail.com", "123456");
+            var isValid = UserScopes.AuthenticateUserScopeIsValid(this.validUser, "lucas.rosinelli@hotmail.com", "123");
             Assert.AreEqual(false, isValid);
         }
     }
