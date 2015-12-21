@@ -8,6 +8,7 @@ namespace TrainingWebStore.Domain.ApplicationServices
     {
         List<Product> Get();
         List<Product> Get(int skip, int take);
+        List<Product> GetProductsInStock();
         List<Product> GetProductsOutOfStock();
         Product Get(int id);
         Product Create(CreateProductCommand command);

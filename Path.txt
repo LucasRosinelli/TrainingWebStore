@@ -1,3 +1,9 @@
 Modulo 3
-Parte 07
-25:00
+Parte 08
+22:30
+
+To do:
+- Implementar globalização (idioma)
+- Implementar mensagens e tamanhos dos campos em local centralizado
+
+EF PROFILER (verificador das queries executadas pelo EntityFramework no banco de dados)

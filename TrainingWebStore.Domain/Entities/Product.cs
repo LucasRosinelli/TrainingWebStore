@@ -22,7 +22,7 @@ namespace TrainingWebStore.Domain.Entities
         public int CategoryId { get; private set; }
         public Category Category { get; private set; }
 
-        public void Register(int amount)
+        public void Register()
         {
             this.RegisterProductScopeIsValid();
         }

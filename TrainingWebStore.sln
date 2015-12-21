@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingWebStore.Infrastructure", "TrainingWebStore.Infrastructure\TrainingWebStore.Infrastructure.csproj", "{91321778-DEE8-4C57-9863-061DD2B2D584}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application Service", "2 - Application Service", "{A54BA785-AAD1-41D1-8036-E734D318B97F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingWebStore.ApplicationService", "TrainingWebStore.ApplicationService\TrainingWebStore.ApplicationService.csproj", "{EDB039F5-1D28-4450-ABF9-AB3FFDD35B2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +48,10 @@ Global
 		{91321778-DEE8-4C57-9863-061DD2B2D584}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91321778-DEE8-4C57-9863-061DD2B2D584}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91321778-DEE8-4C57-9863-061DD2B2D584}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDB039F5-1D28-4450-ABF9-AB3FFDD35B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDB039F5-1D28-4450-ABF9-AB3FFDD35B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDB039F5-1D28-4450-ABF9-AB3FFDD35B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDB039F5-1D28-4450-ABF9-AB3FFDD35B2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,5 +61,6 @@ Global
 		{9F5ECB3D-5068-4D5C-8B5F-96260D4F5E80} = {A78BE41E-0F5A-4606-BC05-B7EA4944FDF7}
 		{E5B29B81-40E0-4C08-AD4A-73F60576D624} = {47CE9427-FCB4-4251-81DC-6DF9AE5AC92E}
 		{91321778-DEE8-4C57-9863-061DD2B2D584} = {C746A418-9194-4DCF-8791-819A8297B218}
+		{EDB039F5-1D28-4450-ABF9-AB3FFDD35B2F} = {A54BA785-AAD1-41D1-8036-E734D318B97F}
 	EndGlobalSection
 EndGlobal
