@@ -10,7 +10,9 @@ namespace TrainingWebStore.Domain.Scopes
             return AssertionConcern.IsSatisfiedBy
                 (
                     AssertionConcern.AssertNotNull(product.Title, "O título do produto é obrigatório."),
+                    AssertionConcern.AssertLength(product.Title, 3, 100, "Tamanho do título inválido."),
                     AssertionConcern.AssertNotNull(product.Description, "A descrição do produto é obrigatória."),
+                    AssertionConcern.AssertLength(product.Title, 5, 1024, "Tamanho da descrição inválida."),
                     AssertionConcern.AssertIsGreaterThan(product.CategoryId, 0, "A categoria do produto é obrigatória."),
                     AssertionConcern.AssertIsGreaterThan(product.Price, 0, "O preço do produto não pode ser menor que zero."),
                     AssertionConcern.AssertIsGreaterThan(product.QuantityOnHand, 0, "A quantidade do produto não pode ser menor que zero.")

@@ -10,7 +10,7 @@ namespace TrainingWebStore.Domain.Scopes
             return AssertionConcern.IsSatisfiedBy
                 (
                     AssertionConcern.AssertNotEmpty(category.Title, "O título é obrigatório."),
-                    AssertionConcern.AssertLength(category.Title, 3, 30, "Tamanho do título inválido.")
+                    AssertionConcern.AssertLength(category.Title, 3, 60, "Tamanho do título inválido.")
                 );
         }
 
@@ -19,7 +19,7 @@ namespace TrainingWebStore.Domain.Scopes
             return AssertionConcern.IsSatisfiedBy
                 (
                     AssertionConcern.AssertNotEmpty(title, "O título é obrigatório."),
-                    AssertionConcern.AssertLength(title, 3, 30, "Tamanho do título inválido.")
+                    AssertionConcern.AssertLength(title, 3, 60, "Tamanho do título inválido.")
                 );
         }
     }

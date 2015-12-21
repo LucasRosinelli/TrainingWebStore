@@ -10,7 +10,9 @@ namespace TrainingWebStore.Domain.Scopes
             return AssertionConcern.IsSatisfiedBy
                 (
                     AssertionConcern.AssertNotEmpty(user.Email, "O e-mail é obrigatório."),
-                    AssertionConcern.AssertNotEmpty(user.Password, "A senha é obrigatória.")
+                    AssertionConcern.AssertLength(user.Email, 0, 256, "Tamanho do e-mail inválido."),
+                    AssertionConcern.AssertNotEmpty(user.Password, "A senha é obrigatória."),
+                    AssertionConcern.AssertLength(user.Password, 0, 256, "Tamanho da senha inválida.")
                 );
         }
 
@@ -19,7 +21,9 @@ namespace TrainingWebStore.Domain.Scopes
             return AssertionConcern.IsSatisfiedBy
                 (
                     AssertionConcern.AssertNotEmpty(email, "O e-mail é obrigatório."),
+                    AssertionConcern.AssertLength(email, 0, 256, "Tamanho do e-mail inválido."),
                     AssertionConcern.AssertNotEmpty(encryptedPassword, "A senha é obrigatória."),
+                    AssertionConcern.AssertLength(encryptedPassword, 0, 256, "Tamanho da senha inválida."),
                     AssertionConcern.AssertAreEquals(user.Email, email, "Usuário ou senha inválidos."),
                     AssertionConcern.AssertAreEquals(user.Password, encryptedPassword, "Usuário ou senha inválidos.")
                 );
