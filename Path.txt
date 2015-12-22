@@ -1,10 +1,16 @@
-Modulo 3
-Parte 10
+Módulo 4
+Parte 4
 0:00
 
 To do:
 - Implementar globalização (idioma)
 - Implementar mensagens e tamanhos dos campos em local centralizado
 - Em TrainingWebStore.Api.Controllers.BaseController.CreateResponse.HttpStatusCode, object), encriptar o conteúdo da mensagem
+
+Instalar, de acordo com a parte 1 do módulo 4:
+- Node JS (https://nodejs.org)
+- git for windows (https://git-for-windows.github.io/)
+   > Tutorial: http://stackoverflow.com/questions/20666989/bower-enogit-git-is-not-installed-or-not-in-the-path
+- Web Essentials 2013 (http://vswebessentials.com/download)
 
 EF PROFILER (verificador das queries executadas pelo EntityFramework no banco de dados)

@@ -20,7 +20,7 @@ namespace TrainingWebStore.Api.Controllers
 
         [HttpPost]
         [Route("api/orders")]
-        [Authorize(Roles = Constants.RoleAdmin)]
+        [Authorize]
         public Task<HttpResponseMessage> Post([FromBody]dynamic body)
         {
             var command = new CreateOrderCommand(
