@@ -1,9 +1,10 @@
 Modulo 3
-Parte 09
+Parte 10
 0:00
 
 To do:
 - Implementar globalização (idioma)
 - Implementar mensagens e tamanhos dos campos em local centralizado
+- Em TrainingWebStore.Api.Controllers.BaseController.CreateResponse.HttpStatusCode, object), encriptar o conteúdo da mensagem
 
 EF PROFILER (verificador das queries executadas pelo EntityFramework no banco de dados)

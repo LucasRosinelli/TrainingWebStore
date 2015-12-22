@@ -32,7 +32,7 @@ namespace TrainingWebStore.ApplicationService
 
         public User Authenticate(string email, string password)
         {
-            return this.Authenticate(email, password);
+            return this._repository.Authenticate(email, password);
         }
     }
 }

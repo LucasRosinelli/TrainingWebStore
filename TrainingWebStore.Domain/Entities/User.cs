@@ -5,6 +5,10 @@ namespace TrainingWebStore.Domain.Entities
 {
     public class User
     {
+        protected User()
+        {
+        }
+
         public User(string email, string password, bool isAdmin)
         {
             this.Email = email;

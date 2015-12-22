@@ -8,6 +8,8 @@ namespace TrainingWebStore.SharedKernel
 {
     public class Constants
     {
+        public const string RoleAdmin = "admin";
+
         public const string StringFormat_x2 = "x2";
 
         public const string AssertArgumentLength = "AssertArgumentLength";
