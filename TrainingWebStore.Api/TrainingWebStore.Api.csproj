@@ -173,12 +173,36 @@
     <Content Include="wwwroot\admin\app\controllers\account\logout-controller.js" />
     <Content Include="wwwroot\admin\app\controllers\category\category-controller.js" />
     <Content Include="wwwroot\admin\app\controllers\home\home-controller.js" />
+    <Content Include="wwwroot\admin\app\controllers\product\product-create-controller.js" />
+    <Content Include="wwwroot\admin\app\controllers\product\product-list-controller.js" />
     <Content Include="wwwroot\admin\app\factories\account-factory.js" />
     <Content Include="wwwroot\admin\app\factories\category-factory.js" />
+    <Content Include="wwwroot\admin\app\factories\product-factory.js" />
     <Content Include="wwwroot\admin\app\routes.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\.gitattributes" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\.gitignore" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\compile\minified\ng-img-crop.css" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\compile\minified\ng-img-crop.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\compile\unminified\ng-img-crop.css" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\compile\unminified\ng-img-crop.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\gulpfile.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\screenshots\circle_1.jpg" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\screenshots\square_1.jpg" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\classes\crop-area-circle.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\classes\crop-area-square.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\classes\crop-area.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\classes\crop-canvas.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\classes\crop-exif.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\classes\crop-host.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\classes\crop-pubsub.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\init.js" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\ng-img-crop.js" />
     <Content Include="wwwroot\admin\public\dev\pages\account\login.html" />
     <Content Include="wwwroot\admin\public\dev\pages\category\index.html" />
     <Content Include="wwwroot\admin\public\dev\pages\home\index.html" />
+    <Content Include="wwwroot\admin\public\dev\pages\product\create.html" />
+    <Content Include="wwwroot\admin\public\dev\pages\product\edit.html" />
+    <Content Include="wwwroot\admin\public\dev\pages\product\index.html" />
     <Content Include="wwwroot\admin\public\dev\pages\shared\headbar.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -435,6 +459,13 @@
     <Content Include="wwwroot\admin\bower_components\angular\bower.json" />
     <Content Include="wwwroot\admin\bower_components\angular\package.json" />
     <Content Include="wwwroot\admin\bower_components\angular\README.md" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\.bower.json" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\.jshintrc" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\bower.json" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\LICENSE" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\package.json" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\README.md" />
+    <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\scss\ng-img-crop.scss" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />

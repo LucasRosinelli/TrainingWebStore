@@ -101,6 +101,8 @@
                 .catch(fail);
 
             function success(response) {
+                var index = vm.categories.indexOf(category);
+                vm.categories.splice(index, 1);
                 toastr.success('Categoria excluída', 'Sucesso');
             }
 
@@ -108,8 +110,6 @@
                 toastr.error('Sua requisição não pode ser processada', 'Falha na requisição');
             }
 
-            var index = vm.categories.indexOf(category);
-            vm.categories.splice(index, 1);
             clearCategory();
         }
     }

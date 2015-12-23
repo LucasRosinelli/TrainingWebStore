@@ -1,4 +1,4 @@
 ﻿(function () {
     'use strict';
-    angular.module('twa', ['ngRoute']);
+    angular.module('twa', ['ngRoute', 'ngImgCrop']);
 })();

@@ -27,10 +27,25 @@
                 controllerAs: 'vm',
                 templateUrl: 'pages/category/index.html'
             })
-            .when('/categories/edit/:id', {
-                controller: 'CategoryEditCtrl',
+            .when('/products', {
+                controller: 'ProductListCtrl',
                 controllerAs: 'vm',
-                templateUrl: 'pages/category/edit.html'
+                templateUrl: 'pages/product/index.html'
+            })
+            .when('/products/create', {
+                controller: 'ProductCreateCtrl',
+                controllerAs: 'vm',
+                templateUrl: 'pages/product/create.html'
+            })
+            .when('/products/edit/:id', {
+                controller: 'ProductEditCtrl',
+                controllerAs: 'vm',
+                templateUrl: 'pages/product/edit.html'
+            })
+            .when('/products/remove/:id', {
+                controller: 'ProductRemoveCtrl',
+                controllerAs: 'vm',
+                templateUrl: 'pages/product/index.html'
             });
     });
 })();
