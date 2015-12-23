@@ -4,8 +4,6 @@
     HomeCtrl.$inject = [];
     function HomeCtrl() {
         var vm = this;
-        vm.title = "Meu Home Controller";
-        vm.activate = activate;
 
         activate();
 

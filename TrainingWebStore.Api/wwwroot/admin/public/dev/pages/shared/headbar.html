@@ -1,4 +1,4 @@
-﻿<nav class="navbar navbar-inverse">
+﻿<nav class="navbar navbar-inverse" ng-show="user">
     <div class="container">
         <div class="navbar-header">
             <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-menu">
@@ -18,7 +18,7 @@
                 <li><a href="#/orders">Pedidos</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#/">Olá, <em>Lucas Rosinelli</em></a></li>
+                <li><a href="#/">Olá, <em>{{ user }}</em></a></li>
                 <li><a href="#/logout">Sair</a></li>
             </ul>
         </div>

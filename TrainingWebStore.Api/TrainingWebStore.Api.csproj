@@ -168,6 +168,9 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="wwwroot\admin\app\app.js" />
+    <Content Include="wwwroot\admin\app\config.js" />
+    <Content Include="wwwroot\admin\app\controllers\account\login-controller.js" />
+    <Content Include="wwwroot\admin\app\controllers\account\logout-controller.js" />
     <Content Include="wwwroot\admin\app\controllers\home\home-controller.js" />
     <Content Include="wwwroot\admin\app\routes.js" />
     <Content Include="wwwroot\admin\public\dev\pages\account\login.html" />
