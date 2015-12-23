@@ -2,7 +2,7 @@
     'use strict';
     angular.module('twa').controller('LogoutCtrl', LogoutCtrl);
     LogoutCtrl.$inject = ['$location', '$rootScope', 'SETTINGS'];
-    function LogoutCtrl() {
+    function LogoutCtrl($location, $rootScope, SETTINGS) {
         var vm = this;
 
         activate();

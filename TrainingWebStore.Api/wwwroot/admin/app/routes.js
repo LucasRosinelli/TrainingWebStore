@@ -23,7 +23,7 @@
                 templateUrl: 'pages/user/index.html'
             })
             .when('/categories', {
-                controller: 'CategoryListCtrl',
+                controller: 'CategoryCtrl',
                 controllerAs: 'vm',
                 templateUrl: 'pages/category/index.html'
             })

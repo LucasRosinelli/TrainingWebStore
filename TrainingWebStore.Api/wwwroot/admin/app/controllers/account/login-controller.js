@@ -1,8 +1,8 @@
 ﻿(function () {
     'use strict';
     angular.module('twa').controller('LoginCtrl', LoginCtrl);
-    LoginCtrl.$inject = ['$http', '$location', '$rootScope', 'SETTINGS'];
-    function LoginCtrl($http, $location, $rootScope, SETTINGS) {
+    LoginCtrl.$inject = ['$location', '$rootScope', 'SETTINGS', 'AccountFactory'];
+    function LoginCtrl($location, $rootScope, SETTINGS, AccountFactory) {
         var vm = this;
         vm.login = {
             email: '',
@@ -16,10 +16,7 @@
         }
 
         function login() {
-            var data = "grant_type=password&username=" + vm.login.email + "&password=" + vm.login.password;
-            var url = SETTINGS.SERVICE_URL + 'api/security/token';
-            var header = { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } };
-            $http.post(url, data, header)
+            AccountFactory.login(vm.login)
                 .success(success)
                 .catch(fail);
 

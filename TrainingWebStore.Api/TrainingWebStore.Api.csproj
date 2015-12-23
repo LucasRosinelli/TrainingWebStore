@@ -171,9 +171,13 @@
     <Content Include="wwwroot\admin\app\config.js" />
     <Content Include="wwwroot\admin\app\controllers\account\login-controller.js" />
     <Content Include="wwwroot\admin\app\controllers\account\logout-controller.js" />
+    <Content Include="wwwroot\admin\app\controllers\category\category-controller.js" />
     <Content Include="wwwroot\admin\app\controllers\home\home-controller.js" />
+    <Content Include="wwwroot\admin\app\factories\account-factory.js" />
+    <Content Include="wwwroot\admin\app\factories\category-factory.js" />
     <Content Include="wwwroot\admin\app\routes.js" />
     <Content Include="wwwroot\admin\public\dev\pages\account\login.html" />
+    <Content Include="wwwroot\admin\public\dev\pages\category\index.html" />
     <Content Include="wwwroot\admin\public\dev\pages\home\index.html" />
     <Content Include="wwwroot\admin\public\dev\pages\shared\headbar.html" />
     <None Include="Web.Debug.config">

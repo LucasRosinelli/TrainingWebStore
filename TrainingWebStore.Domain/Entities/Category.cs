@@ -4,6 +4,10 @@ namespace TrainingWebStore.Domain.Entities
 {
     public class Category
     {
+        protected Category()
+        {
+        }
+
         public Category(string title)
         {
             this.Title = title;

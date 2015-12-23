@@ -10,6 +10,10 @@ namespace TrainingWebStore.Domain.Entities
     {
         private IList<OrderItem> _orderItems;
 
+        protected Order()
+        {
+        }
+
         public Order(IList<OrderItem> orderItems, int userId)
         {
             this.Date = DateTime.Now;

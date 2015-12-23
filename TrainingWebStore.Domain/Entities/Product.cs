@@ -4,6 +4,10 @@ namespace TrainingWebStore.Domain.Entities
 {
     public class Product
     {
+        protected Product()
+        {
+        }
+
         public Product(string title, string description, decimal price, int quantityOnHand, int categoryId)
         {
             this.Title = title;
