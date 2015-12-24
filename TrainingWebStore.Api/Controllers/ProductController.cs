@@ -66,8 +66,8 @@ namespace TrainingWebStore.Api.Controllers
                 title: (string)body.title,
                 description: (string)body.description,
                 price: (decimal)body.price,
-                quantityOnHand: (int)body.quantityonhand,
-                category: (int)body.category
+                quantityOnHand: (int)body.quantityOnHand,
+                category: (int)body.categoryId
                 );
 
             var product = this._service.Create(command);
@@ -75,7 +75,7 @@ namespace TrainingWebStore.Api.Controllers
         }
 
         [HttpPut]
-        [Route("api/products")]
+        [Route("api/products/{id}")]
         [Authorize(Roles = Constants.RoleAdmin)]
         public Task<HttpResponseMessage> Put(int id, [FromBody]dynamic body)
         {
@@ -83,10 +83,19 @@ namespace TrainingWebStore.Api.Controllers
                 id: id,
                 title: (string)body.title,
                 description: (string)body.description,
-                category: (int)body.category
+                category: (int)body.categoryId
                 );
 
             var product = this._service.UpdateBasicInformation(command);
+            return base.CreateResponse(HttpStatusCode.OK, product);
+        }
+
+        [HttpDelete]
+        [Route("api/products/{id}")]
+        [Authorize(Roles = Constants.RoleAdmin)]
+        public Task<HttpResponseMessage> Delete(int id)
+        {
+            var product = this._service.Delete(id);
             return base.CreateResponse(HttpStatusCode.OK, product);
         }
     }

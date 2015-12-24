@@ -1,25 +1,20 @@
 ﻿(function () {
     'use strict';
-    angular.module('twa').controller('ProductCreateCtrl', ProductCreateCtrl);
-    ProductCreateCtrl.$inject = ['$scope', '$location', 'ProductFactory', 'CategoryFactory'];
-    function ProductCreateCtrl($scope, $location, ProductFactory, CategoryFactory) {
+    angular.module('twa').controller('ProductEditCtrl', ProductEditCtrl);
+    ProductEditCtrl.$inject = ['$routeParams', '$scope', '$location', 'ProductFactory', 'CategoryFactory'];
+    function ProductEditCtrl($routeParams, $scope, $location, ProductFactory, CategoryFactory) {
         var vm = this;
+        var id = $routeParams.id;
+
         vm.categories = [];
-        vm.product = {
-            title: '',
-            categoryId: 0,
-            description: '',
-            price: 0,
-            quantityOnHand: 0,
-            image: ''
-        };
-        vm.croppedImage = '';
+        vm.product = {};
         vm.save = save;
 
         activate();
 
         function activate() {
             getCategories();
+            getProduct();
         }
 
         function getCategories() {
@@ -41,13 +36,32 @@
             }
         }
 
-        function save() {
-            ProductFactory.post(vm.product)
+        function getProduct() {
+            ProductFactory.getById(id)
                 .success(success)
                 .catch(fail);
 
             function success(response) {
-                toastr.success('Produto cadastrado', 'Sucesso');
+                vm.product = response;
+            }
+
+            function fail(error) {
+                if (error.status == 401) {
+                    toastr.error('Você não tem permissão para ver esta página', 'Requisição não autorizada');
+                }
+                else {
+                    toastr.error('Sua requisição não pode ser processada', 'Falha na requisição');
+                }
+            }
+        }
+
+        function save() {
+            ProductFactory.put(vm.product)
+                .success(success)
+                .catch(fail);
+
+            function success(response) {
+                toastr.success('Produto alterado', 'Sucesso');
                 $location.path('/products');
             }
 

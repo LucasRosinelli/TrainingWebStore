@@ -5,6 +5,8 @@
     function ProductListCtrl(ProductFactory) {
         var vm = this;
         vm.products = [];
+        vm.product;
+        vm.removeProduct = removeProduct;
 
         activate();
 
@@ -29,6 +31,27 @@
                     toastr.error('Sua requisição não pode ser processada', 'Falha na requisição');
                 }
             }
+        }
+
+        function removeProduct(product) {
+            vm.product = product;
+            ProductFactory.remove(vm.product)
+                .success(success)
+                .catch(fail);
+
+            function success(response) {
+                var index = vm.products.indexOf(product);
+                vm.products.splice(index, 1);
+                toastr.success('Produto excluído', 'Sucesso');
+            }
+
+            function fail(error) {
+                toastr.error('Sua requisição não pode ser processada', 'Falha na requisição');
+            }
+
+            vm.product = {
+                id: 0
+            };
         }
     }
 })();

@@ -5,6 +5,7 @@
     function ProductFactory($http, $rootScope, SETTINGS) {
         return {
             get: get,
+            getById: getById,
             post: post,
             put: put,
             remove: remove
@@ -14,12 +15,16 @@
             return $http.get(SETTINGS.SERVICE_URL + 'api/products', $rootScope.header);
         }
 
+        function getById(id) {
+            return $http.get(SETTINGS.SERVICE_URL + 'api/products/' + id, $rootScope.header);
+        }
+
         function post(product) {
             return $http.post(SETTINGS.SERVICE_URL + 'api/products', product, $rootScope.header);
         }
 
         function put(product) {
-            return $http.put(SETTINGS.SERVICE_URL + 'api/products/' + product.id, category, $rootScope.header);
+            return $http.put(SETTINGS.SERVICE_URL + 'api/products/' + product.id, product, $rootScope.header);
         }
 
         function remove(product) {

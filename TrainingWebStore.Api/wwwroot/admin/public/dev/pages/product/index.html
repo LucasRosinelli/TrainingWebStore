@@ -26,9 +26,9 @@
                     <a href="#/products/edit/{{ product.id }}" class="btn btn-group btn-default btn-sm">
                         <i class="fa fa-edit"></i>
                     </a>
-                    <a href="#/products/edit/{{ product.id }}" class="btn btn-group btn-danger btn-sm">
+                    <button class="btn btn-group btn-danger btn-sm" ng-click="vm.removeProduct(product)">
                         <i class="fa fa-remove"></i>
-                    </a>
+                    </button>
                 </div>
             </td>
         </tr>

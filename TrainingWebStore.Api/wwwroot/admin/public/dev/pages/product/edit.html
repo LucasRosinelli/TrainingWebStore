@@ -1,9 +1,43 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
+﻿<h3>Edição do Produto</h3>
+<div class="form-group">
+    <label for="categoryId">Categoria</label>
+    <select class="form-control" ng-model="vm.product.categoryId" id="categoryId" name="categoryId" ng-options="category.id as category.title for category in vm.categories"></select>
+</div>
+<div class="form-group" ng-class="{ 'has-error': title.$invalid && title.$dirty }">
+    <label for="title">Título</label>
+    <input type="text" value="" class="form-control" ng-model="vm.product.title" ng-minlength="3" ng-maxlength="100" id="title" name="title" placeholder="Título" required />
+</div>
+<div class="form-group" ng-class="{ 'has-error': description.$invalid && description.$dirty }">
+    <label for="description">Descrição</label>
+    <input type="text" value="" class="form-control" ng-model="vm.product.description" ng-minlength="5" ng-maxlength="1024" id="description" name="description" placeholder="Descrição" required />
+</div>
+<div class="form-group" ng-class="{ 'has-error': price.$invalid && price.$dirty }">
+    <label for="price">Preço</label>
+    <input type="number" value="" class="form-control" ng-model="vm.product.price" id="price" name="price" placeholder="Preço" required />
+</div>
+<div class="form-group" ng-class="{ 'has-error': quantityOnHand.$invalid && quantityOnHand.$dirty }">
+    <label for="quantityOnHand">Quantidade em estoque</label>
+    <input type="number" value="" class="form-control" ng-model="vm.product.quantityOnHand" id="quantityOnHand" name="quantityOnHand" placeholder="Quantidade em estoque" required />
+</div>
+<div class="form-group">
+    <label for="file">Selecione uma imagem</label>
+    <input type="file" value="" id="file" name="file" />
+</div>
 
-</body>
-</html>
+<br />
+<div class="clearfix"></div>
+
+<div class="cropArea">
+    <img-crop image="vm.product.image" area-type="square" result-image="vm.croppedImage"></img-crop>
+</div>
+
+<img ng-src="{{ vm.croppedImage }}" />
+
+<br />
+<div class="clearfix"></div>
+
+<p class="text-center">
+    <button class="btn btn-primary btn-lg" ng-click="vm.save()">
+        Salvar
+    </button>
+</p>

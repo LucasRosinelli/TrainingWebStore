@@ -1,9 +1,7 @@
 ﻿<h3>Novo Produto</h3>
-<div class="form-group" ng-class="{ 'has-error': title.$invalid && title.$dirty }">
-    <label for="category">Categoria</label>
-    <select class="form-control" ng-model="vm.product.category" id="category" name="category">
-        <option value="{{ category.id }}" ng-repeat="category in vm.categories">{{ category.title }}</option>
-    </select>
+<div class="form-group">
+    <label for="categoryId">Categoria</label>
+    <select class="form-control" ng-model="vm.product.categoryId" id="categoryId" name="categoryId" ng-options="category.id as category.title for category in vm.categories"></select>
 </div>
 <div class="form-group" ng-class="{ 'has-error': title.$invalid && title.$dirty }">
     <label for="title">Título</label>
@@ -21,3 +19,25 @@
     <label for="quantityOnHand">Quantidade em estoque</label>
     <input type="number" value="" class="form-control" ng-model="vm.product.quantityOnHand" id="quantityOnHand" name="quantityOnHand" placeholder="Quantidade em estoque" required />
 </div>
+<div class="form-group">
+    <label for="file">Selecione uma imagem</label>
+    <input type="file" value="" id="file" name="file" />
+</div>
+
+<br />
+<div class="clearfix"></div>
+
+<div class="cropArea">
+    <img-crop image="vm.product.image" area-type="square" result-image="vm.croppedImage"></img-crop>
+</div>
+
+<img ng-src="{{ vm.croppedImage }}" />
+
+<br />
+<div class="clearfix"></div>
+
+<p class="text-center">
+    <button class="btn btn-primary btn-lg" ng-click="vm.save()">
+        Salvar
+    </button>
+</p>
