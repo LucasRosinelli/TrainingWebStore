@@ -198,6 +198,8 @@
     <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\classes\crop-pubsub.js" />
     <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\init.js" />
     <Content Include="wwwroot\admin\bower_components\ng-img-crop\source\js\ng-img-crop.js" />
+    <Content Include="wwwroot\admin\Gruntfile.js" />
+    <Content Include="wwwroot\admin\public\dev\assets\css\site.css" />
     <Content Include="wwwroot\admin\public\dev\pages\account\login.html" />
     <Content Include="wwwroot\admin\public\dev\pages\category\index.html" />
     <Content Include="wwwroot\admin\public\dev\pages\home\index.html" />
@@ -205,6 +207,17 @@
     <Content Include="wwwroot\admin\public\dev\pages\product\edit.html" />
     <Content Include="wwwroot\admin\public\dev\pages\product\index.html" />
     <Content Include="wwwroot\admin\public\dev\pages\shared\headbar.html" />
+    <Content Include="wwwroot\admin\public\dist\assets\css\styles-1.0.0.min.css" />
+    <Content Include="wwwroot\admin\public\dist\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="wwwroot\admin\public\dist\assets\js\scripts-1.0.0.min.js" />
+    <Content Include="wwwroot\admin\public\dist\index.html" />
+    <Content Include="wwwroot\admin\public\dist\pages\account\login.html" />
+    <Content Include="wwwroot\admin\public\dist\pages\category\index.html" />
+    <Content Include="wwwroot\admin\public\dist\pages\home\index.html" />
+    <Content Include="wwwroot\admin\public\dist\pages\product\create.html" />
+    <Content Include="wwwroot\admin\public\dist\pages\product\edit.html" />
+    <Content Include="wwwroot\admin\public\dist\pages\product\index.html" />
+    <Content Include="wwwroot\admin\public\dist\pages\shared\headbar.html" />
     <Content Include="wwwroot\store\app\app.js" />
     <Content Include="wwwroot\store\app\config.js" />
     <Content Include="wwwroot\store\app\controllers\account\login-controller.js" />
@@ -414,6 +427,7 @@
     <Content Include="wwwroot\store\bower_components\toastr\toastr.js" />
     <Content Include="wwwroot\store\bower_components\toastr\toastr.min.css" />
     <Content Include="wwwroot\store\bower_components\toastr\toastr.min.js" />
+    <Content Include="wwwroot\store\public\dev\assets\css\site.css" />
     <Content Include="wwwroot\store\public\dev\index.html" />
     <Content Include="wwwroot\store\public\dev\pages\account\login.html" />
     <Content Include="wwwroot\store\public\dev\pages\home\index.html" />
@@ -922,6 +936,12 @@
     <Content Include="wwwroot\store\bower_components\toastr\toastr.js.map" />
     <Content Include="wwwroot\store\bower_components\toastr\toastr.less" />
     <Content Include="wwwroot\store\bower_components\toastr\toastr.scss" />
+    <Content Include="wwwroot\admin\package.json" />
+    <Content Include="wwwroot\admin\public\dist\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="wwwroot\admin\public\dist\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="wwwroot\admin\public\dist\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="wwwroot\admin\public\dist\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="wwwroot\admin\public\dist\assets\fonts\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -1106,7 +1126,6 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\admin\public\dist\" />
     <Folder Include="wwwroot\store\public\dist\" />
   </ItemGroup>
   <ItemGroup>
