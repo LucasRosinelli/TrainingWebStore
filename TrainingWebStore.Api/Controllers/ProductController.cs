@@ -43,7 +43,7 @@ namespace TrainingWebStore.Api.Controllers
 
         [HttpGet]
         [Route("api/products/instock")]
-        public Task<HttpResponseMessage> GetInStock(int skip, int take)
+        public Task<HttpResponseMessage> GetInStock()
         {
             var products = this._service.GetProductsInStock();
             return base.CreateResponse(HttpStatusCode.OK, products);
@@ -51,7 +51,7 @@ namespace TrainingWebStore.Api.Controllers
 
         [HttpGet]
         [Route("api/products/outofstock")]
-        public Task<HttpResponseMessage> GetOutOfStock(int skip, int take)
+        public Task<HttpResponseMessage> GetOutOfStock()
         {
             var products = this._service.GetProductsOutOfStock();
             return base.CreateResponse(HttpStatusCode.OK, products);

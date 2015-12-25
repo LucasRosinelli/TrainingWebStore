@@ -8,7 +8,8 @@
             getById: getById,
             post: post,
             put: put,
-            remove: remove
+            remove: remove,
+            list: list
         };
 
         function get() {
@@ -29,6 +30,10 @@
 
         function remove(product) {
             return $http.delete(SETTINGS.SERVICE_URL + 'api/products/' + product.id, $rootScope.header);
+        }
+
+        function list() {
+            return $http.get(SETTINGS.SERVICE_URL + 'api/products/instock', $rootScope.header);
         }
     }
 })();
