@@ -28,9 +28,22 @@
         }
 
         function addToCart(product) {
-            $rootScope.cart.push(product);
+            var index = -1;
+            for (var i = 0; i < $rootScope.cart.length; i++) {
+                if ($rootScope.cart[i].id == product.id) {
+                    index = i;
+                    break;
+                }
+            }
+            if (index > -1) {
+                $rootScope.cart[index].quantity++;
+            }
+            else {
+                product.quantity = 1;
+                $rootScope.cart.push(product);
+            }
             localStorage.setItem(SETTINGS.CART_ITEMS, angular.toJson($rootScope.cart));
-            toastr('Produto adicionado ao carrinho com sucesso', 'Produto incluído');
+            toastr.success('Produto adicionado ao carrinho com sucesso', 'Produto incluído');
         }
     }
 })();

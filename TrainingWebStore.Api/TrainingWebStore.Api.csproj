@@ -427,12 +427,21 @@
     <Content Include="wwwroot\store\bower_components\toastr\toastr.js" />
     <Content Include="wwwroot\store\bower_components\toastr\toastr.min.css" />
     <Content Include="wwwroot\store\bower_components\toastr\toastr.min.js" />
+    <Content Include="wwwroot\store\Gruntfile.js" />
     <Content Include="wwwroot\store\public\dev\assets\css\site.css" />
     <Content Include="wwwroot\store\public\dev\index.html" />
     <Content Include="wwwroot\store\public\dev\pages\account\login.html" />
     <Content Include="wwwroot\store\public\dev\pages\home\index.html" />
     <Content Include="wwwroot\store\public\dev\pages\shared\headbar.html" />
     <Content Include="wwwroot\store\public\dev\pages\store\cart.html" />
+    <Content Include="wwwroot\store\public\dist\assets\css\styles-1.0.0.min.css" />
+    <Content Include="wwwroot\store\public\dist\assets\fonts\fontawesome-webfont.svg" />
+    <Content Include="wwwroot\store\public\dist\assets\js\scripts-1.0.0.min.js" />
+    <Content Include="wwwroot\store\public\dist\index.html" />
+    <Content Include="wwwroot\store\public\dist\pages\account\login.html" />
+    <Content Include="wwwroot\store\public\dist\pages\home\index.html" />
+    <Content Include="wwwroot\store\public\dist\pages\shared\headbar.html" />
+    <Content Include="wwwroot\store\public\dist\pages\store\cart.html" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -942,6 +951,12 @@
     <Content Include="wwwroot\admin\public\dist\assets\fonts\fontawesome-webfont.woff" />
     <Content Include="wwwroot\admin\public\dist\assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="wwwroot\admin\public\dist\assets\fonts\FontAwesome.otf" />
+    <Content Include="wwwroot\store\package.json" />
+    <Content Include="wwwroot\store\public\dist\assets\fonts\fontawesome-webfont.eot" />
+    <Content Include="wwwroot\store\public\dist\assets\fonts\fontawesome-webfont.ttf" />
+    <Content Include="wwwroot\store\public\dist\assets\fonts\fontawesome-webfont.woff" />
+    <Content Include="wwwroot\store\public\dist\assets\fonts\fontawesome-webfont.woff2" />
+    <Content Include="wwwroot\store\public\dist\assets\fonts\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
@@ -1125,9 +1140,7 @@
     <Compile Include="Security\SimpleAuthorizationServerProvider.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="wwwroot\store\public\dist\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\TrainingWebStore.ApplicationService\TrainingWebStore.ApplicationService.csproj">
       <Project>{edb039f5-1d28-4450-abf9-ab3ffdd35b2f}</Project>

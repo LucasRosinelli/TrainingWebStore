@@ -1,12 +1,14 @@
 ﻿(function () {
     'use strict';
     angular.module('twa').controller('CartCtrl', CartCtrl);
-    CartCtrl.$inject = ['$rootScope'];
-    function CartCtrl($rootScope) {
+    CartCtrl.$inject = ['$rootScope', 'SETTINGS'];
+    function CartCtrl($rootScope, SETTINGS) {
         var vm = this;
         vm.items = [];
         vm.total = 0;
         vm.updateTotal = updateTotal;
+        vm.remove = remove;
+        vm.updateQuantity = updateQuantity;
 
         activate();
 
@@ -20,7 +22,7 @@
                 vm.items.push({
                     title: value.title,
                     image: '',
-                    quantity: 1,
+                    quantity: value.quantity,
                     price: value.price,
                     total: value.price
                 });
@@ -37,6 +39,21 @@
                 total += (value.price * value.quantity);
             });
             vm.total = total;
+        }
+
+        function remove(item) {
+            var index = vm.items.indexOf(item);
+            $rootScope.cart.splice(index, 1);
+            localStorage.setItem(SETTINGS.CART_ITEMS, angular.toJson($rootScope.cart));
+            vm.items.splice(index, 1);
+            updateTotal();
+        }
+
+        function updateQuantity(item) {
+            var index = vm.items.indexOf(item);
+            $rootScope.cart[index].quantity = item.quantity;
+            localStorage.setItem(SETTINGS.CART_ITEMS, angular.toJson($rootScope.cart));
+            updateTotal();
         }
     }
 })();
