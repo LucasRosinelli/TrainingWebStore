@@ -1,0 +1,7 @@
+﻿<ion-list>
+    <ion-item class="item-thumbnail-left" ng-repeat="product in products" href="#/product/details/{{ product.id }}">
+        <img ng-src="{{ product.image }}" alt="{{ product.title }}" />
+        <h2>{{ product.title }}</h2>
+        <p>{{ product.description }}</p>
+    </ion-item>
+</ion-list>

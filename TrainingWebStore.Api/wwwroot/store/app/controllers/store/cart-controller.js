@@ -24,7 +24,7 @@
                     image: '',
                     quantity: value.quantity,
                     price: value.price,
-                    total: value.price
+                    total: value.price * value.quantity
                 });
             });
         }

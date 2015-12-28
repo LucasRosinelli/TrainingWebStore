@@ -1,7 +1,3 @@
-Módulo 5
-Parte 3
-0:00
-
 To do:
 - Implementar globalização (idioma)
 - Implementar mensagens e tamanhos dos campos em local centralizado
