@@ -6,7 +6,8 @@
         'AUTH_TOKEN': 'twa-token',
         'AUTH_USER': 'twa-user',
         'CART_ITEMS': 'twa-cart',
-        'SERVICE_URL': 'http://192.168.1.11:10000/'
+        //'SERVICE_URL': 'http://192.168.1.11:10000/' //Casa
+        'SERVICE_URL': 'http://testeadt.intelimidia.com.br/wa/' //Intelimidia
         //'SERVICE_URL': 'http://myapi.lucasrosinelli.com/twa/'
     });
     angular.module('twa').run(function ($rootScope, $ionicPlatform, SETTINGS) {
